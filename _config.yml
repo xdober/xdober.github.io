@@ -74,4 +74,4 @@ deploy:
 backup:
     type: git
     repository:
-       github: git@github.com:xdober/xdober.github.io.git,backup
+       github: https://github.com/xdober/xdober.github.io.git,backup
