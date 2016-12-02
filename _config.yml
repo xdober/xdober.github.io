@@ -73,4 +73,4 @@ deploy:
   message: Site updated@{{ now('YYYY-MM-DD HH:mm:ss') }}
 backup:
     type: git
-    repository: https://github.com/xdober/xdober.github.io.git,backup
+    repository: git@github.com:xdober/xdober.github.io.git,backup
