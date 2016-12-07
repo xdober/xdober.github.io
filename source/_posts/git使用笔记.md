@@ -7,7 +7,7 @@ tags: git github
 - 配置自己的user.name和user.email  
 
 ## 开始项目：
--  在文件夹里执行：  
+-  #### 在文件夹里执行：  
 `
 $ git init
 `  
@@ -15,7 +15,7 @@ $ git init
 - coding and coding   
 
 
-- 提交版本:   
+- #### 提交版本:   
 `
 $ git add .
 `  
@@ -23,7 +23,7 @@ $ git add .
 $ git commit
 `
 
-- push到github：  
+- #### push到github：  
 `
 $ git remote add origin master https://github.com/xxxxxx/xxxxx.git
 `  
@@ -31,7 +31,7 @@ $ git remote add origin master https://github.com/xxxxxx/xxxxx.git
 `
 $ git push
 `
-- 查看项目状态：
+- #### 查看项目状态：
 `
 git status
 `  
@@ -76,4 +76,12 @@ $ git branch -m branchname newname
 - #### 删除分支(未合并的分支)：  
 `
 $ git branch -D branchname
+`  
+- #### 删除分支(已合并)：  
+`
+$ git branch -d branchname  
+`
+- #### 删除远程分支：  
+`
+$ git push origin :branchname
 `
