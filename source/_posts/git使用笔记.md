@@ -1,7 +1,7 @@
 ---
 title: git使用笔记
 date: 2016-11-29 19:17:36
-tags: git github
+tags: [git,github]
 ---
 ## 开始之前：
 - 配置自己的user.name和user.email  
