@@ -3,8 +3,187 @@
     <head>
         <meta charset="utf-8">
         <title>404</title>
+        <style media="screen">
+            .band {
+                width: 90%;
+                max-width: 1240px;
+                margin: 0 auto;
+
+                display: grid;
+
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                grid-gap: 20px;
+            }
+
+            @media only screen and (min-width: 500px) {
+                .band {
+                    grid-template-columns: 1fr 1fr;
+                }
+                .item-1 {
+                    grid-column: 1/ span 2;
+                }
+
+            }
+
+            @media only screen and (min-width: 850px) {
+                .band {
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                }
+
+            }
+
+            .card {
+                background: white;
+                text-decoration: none;
+                color: #444;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                display: flex;
+                flex-direction: column;
+                min-height: 100%;
+
+                position: relative;
+                top: 0;
+                transition: all .1s ease-in;
+            }
+            .card:hover {
+                top: -2px;
+                box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            .card article {
+                padding: 20px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .card h1 {
+                font-size: 20px;
+                margin: 0;
+                color: #333;
+            }
+            .card p {
+                line-height: 1.4;
+                flex: 1;
+            }
+            .card span {
+                font-size: 12px;
+                font-weight: bold;
+                color: #999;
+                text-transform: uppercase;
+                letter-spacing: .05em;
+                margin: 2em 0 0 0;
+            }
+            .card .thumb {
+                padding-bottom: 60%;
+                background-size: cover;
+                background-position: center center;
+            }
+
+
+        </style>
     </head>
     <body>
-        <p>你来到了没有知识的荒原</p>
+        <div class="band">
+            <div class="item-1">
+                <a href="#" class="card">
+                    <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flor.jpg)"></div>
+                    <article>
+                        <h1>How to Code a Scrolling “Alien Lander” Website</h1>
+                        <p>We’ll be putting things together so that as you scroll down from the top of the page you.</p>
+                        <span>Author</span>
+                    </article>
+                </a>
+            </div>
+
+            <div class="item-2">
+                <a href="#" class="card">
+                    <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flor.jpg)"></div>
+                    <article>
+                        <h1>How to Code a Scrolling “Alien Lander” Website</h1>
+                        <p>We’ll be an “Alien Lander” making its way to touch down.</p>
+                        <span>Author</span>
+                    </article>
+                </a>
+            </div>
+
+            <div class="item-3">
+                <a href="#" class="card">
+                    <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flor.jpg)"></div>
+                    <article>
+                        <h1>How to Code a Scrolling “Alien Lander” Website</h1>
+                        <p>We’ll be putof the page you’ll see an “Alien Lander” making its way to touch down.</p>
+                        <span>Author</span>
+                    </article>
+                </a>
+            </div>
+
+            <div class="item-4">
+                <a href="#" class="card">
+                    <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flor.jpg)"></div>
+                    <article>
+                        <h1>How to Code a Scrolling “Alien Lander” Website</h1>
+                        <p>We’ll be as you scroll down from the top of the page you’ll see an “Alien Lander” making its way to touch down.</p>
+                        <span>Author</span>
+                    </article>
+                </a>
+            </div>
+
+            <div class="item-5">
+                <a href="#" class="card">
+                    <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flor.jpg)"></div>
+                    <article>
+                        <h1>How to Code a Scrolling “Alien Lander” Website</h1>
+                        <p>We’ll be putting things together so that as you scroll down from the top of the page you’ll see an “Alien Lander” making its way to touch down.</p>
+                        <span>Author</span>
+                    </article>
+                </a>
+            </div>
+
+            <div class="item-6">
+                <a href="#" class="card">
+                    <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flor.jpg)"></div>
+                    <article>
+                        <h1>How to Code a Scrolling “Alien Lander” Website</h1>
+                        <p>We’ll be putting things together so that as you scroll down =.</p>
+                        <span>Author</span>
+                    </article>
+                </a>
+            </div>
+
+            <div class="item-7">
+                <a href="#" class="card">
+                    <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flor.jpg)"></div>
+                    <article>
+                        <h1>How to Code a Scrolling “Alien Lander” Website</h1>
+                        <p>We’ll be putting things together so that as you scroll down from the top of the page you’ll see an “Alien Lander” making its way to touch down.</p>
+                        <span>Author</span>
+                    </article>
+                </a>
+            </div>
+
+            <div class="item-8">
+                <a href="#" class="card">
+                    <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flor.jpg)"></div>
+                    <article>
+                        <h1>How to Code a Scrolling “Alien Lander” Website</h1>
+                        <p>We’ll be putting things together so that as you scroll down from the top of the page you’ll see an “Alien Lander” making its way to touch down.</p>
+                        <span>Author</span>
+                    </article>
+                </a>
+            </div>
+
+            <div class="item-9">
+                <a href="#" class="card">
+                    <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flor.jpg)"></div>
+                    <article>
+                        <h1>How to Code a Scrolling “Alien Lander” Website</h1>
+                        <p>We’ll be putting things together so that as you scroll down from the top of the page you’ll see an “Alien Lander” making its way to touch down.</p>
+                        <span>Author</span>
+                    </article>
+                </a>
+            </div>
+        </div>
     </body>
 </html>
