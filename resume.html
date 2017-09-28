@@ -1,16 +1,20 @@
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <title>许荣仁</title>
         <style>
+            html{
+              font-size: 10px;
+            }
             body {
                 font-family: Segoe UI, Verdana,sans-serif, monospace;
                 background-color: #fafafa;
             }
             .paper {
                 width: 90%;
-                max-width: 900px;
+                max-width: 90rem;
                 box-sizing: content-box;
                 margin: 7% auto;
             }
@@ -18,36 +22,36 @@
                 display: grid;
                 width: 90%;
                 margin: 0 auto;
-                grid-template-rows: 80px auto 70px;
+                grid-template-rows: 8rem auto auto ;
                 grid-template-columns: 2fr 7fr;
-                grid-column-gap: 25px;
-                grid-row-gap: 20px;
+                grid-column-gap: 2.5rem;
+                grid-row-gap: 2rem;
                 background-color: #ffffff;
                 box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
             }
             .info, .education, .practice, .skill {
-                padding-left: 20px;
-                font-size: 20px;
+                padding-left: 2rem;
+                font-size: 2rem;
                 border-right: 1px solid #e0e0e0;
             }
             .connect, .education-detail, .practice-detail, .skill-detail {
-                padding-right: 20px;
-                font-size: 16px;
+                padding-right: 2rem;
+                font-size: 1.6rem;
             }
             .header {
                 grid-column: 1 / span 2;
                 text-align: center;
-                font-size: 20px;
+                font-size: 2rem;
             }
             .header>h1 {
-                font-size: 30px;
+                font-size: 3rem;
                 font-weight: lighter;
             }
             .LandR {
                 display: flex;
                 flex-direction: row;
-                margin: 10px;
-                font-size: 16px
+                margin: 1rem;
+                font-size: 1.6rem
             }
             .mode {
                 flex: 3;
@@ -56,7 +60,7 @@
                 flex: 7;
             }
             .ptc-item {
-                font-size: 20px;
+                font-size: 2rem;
                 list-style-type: none;
                 padding: 0;
             }
@@ -71,14 +75,24 @@
             }
             .ptc-item-detail>li{
                 color: #505050;
-                font-size: 18px;
-                margin-bottom: 10px;
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
                 margin-left: 15px;
                 padding-left: 4px;
                 border-left: 1px solid #e0e0e0
             }
             .footer {
                 grid-column: 1 /span 2;
+            }
+            @media screen and (min-width:1500px) and (max-width:3000px) {
+                html {
+                  font-size: 16px;
+                }
+            }
+            @media screen and (min-width:3001px) {
+                html {
+                  font-size: 25px;
+                }
             }
             @media print {
                 .paper {
@@ -91,7 +105,7 @@
                     display: grid;
                     width: 90%;
                     margin: 0 auto;
-                    grid-template-rows: 60pt auto 50pt;
+                    grid-template-rows: 60pt auto auto;
                     grid-template-columns: 2fr 7fr;
                     background-color: #ffffff;
                     box-shadow: 0 0 0 white;
@@ -158,10 +172,10 @@
                     </div>
                     <div class="connect">
                         <div class="LandR">
-                            <span class="mode">Phone:</span><span class="detail">15629069226</span>
+                            <span class="mode">Phone:</span><span class="detail">17740501023</span>
                         </div>
                         <div class="LandR">
-                            <span class="mode">Email:</span><span class="detail">xdoberre@gmail.com</span>
+                            <span class="mode">Email:</span><span class="detail">xuduo1017@live.com</span>
                         </div>
                         <div class="LandR">
                             <span class="mode">QQ:</span><span class="detail">2267948095</span>
@@ -173,6 +187,7 @@
                     <div class="education-detail">
                         <p>计算机科学与技术（本科）@华中科技大学</p>
                         <p> 2014.09 ~ 2018.06</p>
+                        <p> 加权成绩：83.62</p>
                     </div>
                     <div class="practice">
                         <p>实践经历</p>
@@ -180,20 +195,28 @@
                     <div class="practice-detail">
                         <ul class="ptc-item">专业相关：
                             <li><ul class="ptc-item-detail">
-                                一个基于electron的简易任务管理器
-                                    <li>基于electron框架，读取linux系统的proc文件，对其进行处理，使用canvas和js画出折线图和饼状图，并定时刷新。</li>
+                                参与游戏服务器的开发
+                                    <li>参与一个游戏服务器的开发（开发语言为Java），了解了项目的结构，统一接口等信息，实现了几个新的功能，完善一个已有功能，发现并协助解决了系统中存在的bug.</li>
                             </ul></li>
                             <li><ul class="ptc-item-detail">
-                                设计与开发学院腾讯创新俱乐部的网站
-                                    <li>使用fireworks和illustrator工具，已画出网站的设计初稿，将进入与web组协同开发的阶段。</li>
+                                基于web SQL的简单的工资管理系统
+                                    <li>使用JavaScript操作web SQL，实现从web页面上对数据库的管理，提供了管理员用户的增删查改和普通用户的查询功能.</li>
                             </ul></li>
+                            <li><ul class="ptc-item-detail">
+                                设计华中科技大学腾讯创新俱乐部的网站
+                                    <li>使用Axure和illustrator等工具，综合考虑技术实现的难度和视觉、交互等方面的逻辑，设计俱乐部官网，与主要开发者和俱乐部负责人沟通，给出设计图稿与必要的说明.</li>
+                            </ul></li>
+                            <li><ul class="ptc-item-detail">
+                                基于electron的Linux任务管理器
+                                    <li>基于electron框架，读取linux系统的proc文件，对其进行处理，使用canvas和js画出折线图和饼状图，并定时刷新.</li>
+                            </ul></li>
+                            <!-- <li><ul class="ptc-item-detail">
+                                小幅修改某学校的网站
+                                <li>调整某学校网站的首页布局，重新制作banner，并修复了一点bug。</li>
+                            </ul></li> -->
                             <li><ul class="ptc-item-detail">
                                 简单的chrome浏览器扩展程序
                                 <li>在页面上显示一个悬浮的时钟框，方便隐藏系统状态栏时查看时间。</li>
-                            </ul></li>
-                            <li><ul class="ptc-item-detail">
-                                小幅修改某学校的网站
-                                <li>调整某学校网站的首页布局，重新制作banner，并修复了一点bug。</li>
                             </ul></li>
                         </ul>
                         <ul class="ptc-item">社会实践：
@@ -209,13 +232,16 @@
                     <div class="skill-detail">
                         <ul>
                             <li class="LandR">
+                                <span class="mode">编程:</span><span class="detail">C、HTML/CSS/JavaScript、Java</span>
+                            </li>
+                            <!-- <li class="LandR">
                                 <span class="mode">前端:</span><span class="detail">HTML、CSS、javascript</span>
+                            </li> -->
+                            <li class="LandR">
+                                <span class="mode">设计:</span><span class="detail">PhotoShop、Illustrator、Axure</span>
                             </li>
                             <li class="LandR">
-                                <span class="mode">平台/工具:</span><span class="detail">Linux、git、atom</span>
-                            </li>
-                            <li class="LandR">
-                                <span class="mode">设计（入门）:</span><span class="detail">PhotoShop、Illustrator、FireWorks</span>
+                                <span class="mode">平台/工具:</span><span class="detail">Linux、git</span>
                             </li>
                         </ul>
                     </div>
@@ -225,4 +251,9 @@
             </div>
         </div>
     </body>
+    <script>
+    if(!CSS.supports("display", "grid")){
+        alert("oops, your browser does not support grid view, please use latest chrome, firefox, opera or safrai.")
+    }
+    </script>
 </html>
