@@ -368,41 +368,65 @@ var duoshuoQuery = {short_name:"xdober"};
       
           
         <h2 id="开始之前："><a href="#开始之前：" class="headerlink" title="开始之前："></a>开始之前：</h2><ul>
-<li>配置自己的user.name和user.email  </li>
+<li><h3 id="配置自己的user-name和user-email"><a href="#配置自己的user-name和user-email" class="headerlink" title="配置自己的user.name和user.email"></a>配置自己的user.name和user.email</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name=&quot;xdober&quot;  </div><div class="line">$ git config --global user.email=&quot;xdober@xdober.com&quot;</div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="查看所有的配置项"><a href="#查看所有的配置项" class="headerlink" title="查看所有的配置项:"></a>查看所有的配置项:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git config -l</div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="配置push-pull时不需要输入用户名和密码"><a href="#配置push-pull时不需要输入用户名和密码" class="headerlink" title="配置push/pull时不需要输入用户名和密码:"></a>配置push/pull时不需要输入用户名和密码:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git config --global credential.helper store</div></pre></td></tr></table></figure>
+</li>
 </ul>
+<p><em>执行以上命令后第一次进行push/pull需要用户名和密码，之后不再需要</em></p>
 <h2 id="开始项目："><a href="#开始项目：" class="headerlink" title="开始项目："></a>开始项目：</h2><ul>
-<li><h4 id="在文件夹里执行："><a href="#在文件夹里执行：" class="headerlink" title="在文件夹里执行："></a>在文件夹里执行：</h4><p><code>$ git init</code>  </p>
+<li><h3 id="在文件夹里执行："><a href="#在文件夹里执行：" class="headerlink" title="在文件夹里执行："></a>在文件夹里执行：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git init</div></pre></td></tr></table></figure>
 </li>
 <li><p>coding and coding   </p>
 </li>
 </ul>
 <ul>
-<li><h4 id="提交版本"><a href="#提交版本" class="headerlink" title="提交版本:"></a>提交版本:</h4><p><code>$ git add .</code><br><code>$ git commit</code></p>
+<li><h3 id="提交版本"><a href="#提交版本" class="headerlink" title="提交版本:"></a>提交版本:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git add .</div><div class="line">$ git commit</div></pre></td></tr></table></figure>
 </li>
-<li><h4 id="push到github："><a href="#push到github：" class="headerlink" title="push到github："></a>push到github：</h4><p><code>$ git remote add origin master https://github.com/xxxxxx/xxxxx.git</code><br><em>仅第一次push需要，之后只需要：</em><br><code>$ git push</code></p>
+<li><h3 id="push到github："><a href="#push到github：" class="headerlink" title="push到github："></a>push到github：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git remote add origin master https://github.com/xxxxxx/xxxxx.git</div></pre></td></tr></table></figure>
 </li>
-<li><h4 id="查看项目状态："><a href="#查看项目状态：" class="headerlink" title="查看项目状态："></a>查看项目状态：</h4><code>git status</code>  </li>
+</ul>
+<p><em>仅第一次push需要，之后只需要：</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git push</div></pre></td></tr></table></figure></p>
+<ul>
+<li><h3 id="查看项目状态："><a href="#查看项目状态：" class="headerlink" title="查看项目状态："></a>查看项目状态：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git status</div></pre></td></tr></table></figure>
+</li>
 </ul>
 <h2 id="分支管理："><a href="#分支管理：" class="headerlink" title="分支管理："></a>分支管理：</h2><ul>
-<li><h4 id="创建一个分支："><a href="#创建一个分支：" class="headerlink" title="创建一个分支："></a>创建一个分支：</h4><p><code>$ git branch branchname</code></p>
+<li><h3 id="创建一个分支："><a href="#创建一个分支：" class="headerlink" title="创建一个分支："></a>创建一个分支：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch branchname</div></pre></td></tr></table></figure>
 </li>
-<li><h4 id="切换到分支："><a href="#切换到分支：" class="headerlink" title="切换到分支："></a>切换到分支：</h4><p><code>$ git checkout branchname</code></p>
+<li><h3 id="切换到分支："><a href="#切换到分支：" class="headerlink" title="切换到分支："></a>切换到分支：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout branchname</div></pre></td></tr></table></figure>
 </li>
-<li><h4 id="创建并切换到分支："><a href="#创建并切换到分支：" class="headerlink" title="创建并切换到分支："></a>创建并切换到分支：</h4><p><code>$ git checkout -b branchname</code></p>
+<li><h3 id="创建并切换到分支："><a href="#创建并切换到分支：" class="headerlink" title="创建并切换到分支："></a>创建并切换到分支：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout -b branchname</div></pre></td></tr></table></figure>
 </li>
-<li><h4 id="查看当前分支："><a href="#查看当前分支：" class="headerlink" title="查看当前分支："></a>查看当前分支：</h4><p><code>$ git branch</code></p>
+<li><h3 id="查看当前分支："><a href="#查看当前分支：" class="headerlink" title="查看当前分支："></a>查看当前分支：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch</div></pre></td></tr></table></figure>
 </li>
-<li><h4 id="提交到当前分支："><a href="#提交到当前分支：" class="headerlink" title="提交到当前分支："></a>提交到当前分支：</h4><p><code>$ git add .</code><br><code>$ git commit</code>  </p>
+<li><h3 id="提交到当前分支："><a href="#提交到当前分支：" class="headerlink" title="提交到当前分支："></a>提交到当前分支：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git add .</div><div class="line">$ git commit</div></pre></td></tr></table></figure>
 </li>
-<li><h4 id="push到github：-1"><a href="#push到github：-1" class="headerlink" title="push到github："></a>push到github：</h4><p><code>$ git push origin branchname</code><br><em>如果github的仓库中不存在这个分支，会自动创建</em>  </p>
+<li><h3 id="push到github：-1"><a href="#push到github：-1" class="headerlink" title="push到github："></a>push到github：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git push origin branchname</div></pre></td></tr></table></figure>
 </li>
-<li><h4 id="重命名分支："><a href="#重命名分支：" class="headerlink" title="重命名分支："></a>重命名分支：</h4><p><code>$ git branch -m branchname newname</code>  </p>
-</li>
-<li><h4 id="删除分支-未合并的分支-："><a href="#删除分支-未合并的分支-：" class="headerlink" title="删除分支(未合并的分支)："></a>删除分支(未合并的分支)：</h4><code>$ git branch -D branchname</code>  </li>
-<li><h4 id="删除分支-已合并-："><a href="#删除分支-已合并-：" class="headerlink" title="删除分支(已合并)："></a>删除分支(已合并)：</h4><code>$ git branch -d branchname</code></li>
-<li><h4 id="删除远程分支："><a href="#删除远程分支：" class="headerlink" title="删除远程分支："></a>删除远程分支：</h4><code>$ git push origin :branchname</code></li>
-<li><h4 id="查看所有提交版本"><a href="#查看所有提交版本" class="headerlink" title="查看所有提交版本"></a>查看所有提交版本</h4><code>$ git log --oneline</code></li>
 </ul>
+<p><em>如果github的仓库中不存在这个分支，会自动创建</em>  </p>
+<ul>
+<li><h3 id="重命名分支："><a href="#重命名分支：" class="headerlink" title="重命名分支："></a>重命名分支：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch -m branchname newname</div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="删除分支-未合并的分支-："><a href="#删除分支-未合并的分支-：" class="headerlink" title="删除分支(未合并的分支)："></a>删除分支(未合并的分支)：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch -D branchname</div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="删除分支-已合并-："><a href="#删除分支-已合并-：" class="headerlink" title="删除分支(已合并)："></a>删除分支(已合并)：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch -d branchname</div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="删除远程分支："><a href="#删除远程分支：" class="headerlink" title="删除远程分支："></a>删除远程分支：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git push origin :branchname</div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="查看所有提交版本"><a href="#查看所有提交版本" class="headerlink" title="查看所有提交版本"></a>查看所有提交版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git log --oneline</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="查看log"><a href="#查看log" class="headerlink" title="查看log"></a>查看log</h2><ul>
+<li><h3 id="显示全部log"><a href="#显示全部log" class="headerlink" title="显示全部log"></a>显示全部log</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git log</div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="显示某个author的提交记录"><a href="#显示某个author的提交记录" class="headerlink" title="显示某个author的提交记录"></a>显示某个author的提交记录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git log --author=&quot;username&quot;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><em>username 替换为具体的名字</em></p>
 
       
     </div>
