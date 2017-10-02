@@ -15,19 +15,22 @@
 
 
 
-<meta name="description" content="Markdown 预览
-first ctrl+k, then v.">
+<meta name="description" content="堆的逻辑定义n 个元素序列 {k1,k2…ki…kn}, 当且仅当满足下列关系时称之为堆：
+(ki &amp;lt;= k2i,ki &amp;lt;= k2i+1) 或者 (ki &amp;gt;= k2i,ki &amp;gt;= k2i+1), (i = 1,2,3,4…n/2)
+堆的典型实现堆的一种典型实现是完全二叉树，因为是完全二叉树，所以可以用数组来表示这棵树，而不用链表，第i个数组元素的双亲节点是第(i-1)/2个">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VS code 使用">
-<meta property="og:url" content="http://xdober.github.io/2017/09/29/VS-code-使用/index.html">
+<meta property="og:title" content="堆的JavaScript实现">
+<meta property="og:url" content="http://xdober.github.io/2017/10/02/堆的JavaScript实现/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Markdown 预览
-first ctrl+k, then v.">
-<meta property="og:updated_time" content="2017-09-29T04:36:03.972Z">
+<meta property="og:description" content="堆的逻辑定义n 个元素序列 {k1,k2…ki…kn}, 当且仅当满足下列关系时称之为堆：
+(ki &amp;lt;= k2i,ki &amp;lt;= k2i+1) 或者 (ki &amp;gt;= k2i,ki &amp;gt;= k2i+1), (i = 1,2,3,4…n/2)
+堆的典型实现堆的一种典型实现是完全二叉树，因为是完全二叉树，所以可以用数组来表示这棵树，而不用链表，第i个数组元素的双亲节点是第(i-1)/2个">
+<meta property="og:updated_time" content="2017-10-02T09:23:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VS code 使用">
-<meta name="twitter:description" content="Markdown 预览
-first ctrl+k, then v.">
+<meta name="twitter:title" content="堆的JavaScript实现">
+<meta name="twitter:description" content="堆的逻辑定义n 个元素序列 {k1,k2…ki…kn}, 当且仅当满足下列关系时称之为堆：
+(ki &amp;lt;= k2i,ki &amp;lt;= k2i+1) 或者 (ki &amp;gt;= k2i,ki &amp;gt;= k2i+1), (i = 1,2,3,4…n/2)
+堆的典型实现堆的一种典型实现是完全二叉树，因为是完全二叉树，所以可以用数组来表示这棵树，而不用链表，第i个数组元素的双亲节点是第(i-1)/2个">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -59,7 +62,7 @@ first ctrl+k, then v.">
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>VS code 使用 | Hexo</title>
+<title>堆的JavaScript实现 | Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -259,11 +262,11 @@ first ctrl+k, then v.">
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-VS-code-使用" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-堆的JavaScript实现" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/09/29/VS-code-使用/" class="article-date">
-      <time datetime="2017-09-28T16:01:56.000Z" itemprop="datePublished">2017-09-29</time>
+      <a href="/2017/10/02/堆的JavaScript实现/" class="article-date">
+      <time datetime="2017-10-02T09:20:29.000Z" itemprop="datePublished">2017-10-02</time>
 </a>
 
 
@@ -278,7 +281,7 @@ first ctrl+k, then v.">
         
   
     <h1 class="article-title" itemprop="name">
-      VS code 使用
+      堆的JavaScript实现
     </h1>
   
 
@@ -289,7 +292,7 @@ first ctrl+k, then v.">
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-code/">VS code</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -299,9 +302,13 @@ first ctrl+k, then v.">
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="Markdown-预览"><a href="#Markdown-预览" class="headerlink" title="Markdown 预览"></a>Markdown 预览</h2><ul>
-<li>first <code>ctrl+k</code>, then <code>v</code>.</li>
-</ul>
+        <h2 id="堆的逻辑定义"><a href="#堆的逻辑定义" class="headerlink" title="堆的逻辑定义"></a>堆的逻辑定义</h2><p>n 个元素序列 {k<sub>1</sub>,k<sub>2</sub>…k<sub>i</sub>…k<sub>n</sub>}, 当且仅当满足下列关系时称之为堆：</p>
+<p>(k<sub>i</sub> &lt;= k<sub>2i</sub>,k<sub>i</sub> &lt;= k<sub>2i+1</sub>) 或者 (k<sub>i</sub> &gt;= k<sub>2i</sub>,k<sub>i</sub> &gt;= k<sub>2i+1</sub>), (i = 1,2,3,4…n/2)</p>
+<h2 id="堆的典型实现"><a href="#堆的典型实现" class="headerlink" title="堆的典型实现"></a>堆的典型实现</h2><p>堆的一种典型实现是完全二叉树，因为是完全二叉树，所以可以用数组来表示这棵树，而不用链表，第i个数组元素的双亲节点是第(i-1)/2个数组元素，孩子节点是第(i+1)*2-1和第(i+1)*2个数组元素。</p>
+<h2 id="JavaScript的实现"><a href="#JavaScript的实现" class="headerlink" title="JavaScript的实现"></a>JavaScript的实现</h2><p>定义Heap类，有build, insert, delete和print四个方法，分别新建一个空堆，向堆中插入一个元素，从顶部取出一个元素，和打印堆中的所有元素；有一个size属性，表示了当前堆中的元素数量。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Heap</span> </span>&#123;</div><div class="line">    build() &#123;</div><div class="line">        <span class="keyword">this</span>.data=[];</div><div class="line">        <span class="keyword">this</span>.size=<span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    insert(x)&#123;</div><div class="line">        <span class="keyword">this</span>.data[<span class="keyword">this</span>.data.length]=x;</div><div class="line">        <span class="keyword">let</span> cNum=<span class="keyword">this</span>.data.length<span class="number">-1</span>, pNum=<span class="built_in">parseInt</span>(cNum/<span class="number">2</span>);</div><div class="line">        <span class="keyword">while</span>(cNum&gt;<span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">if</span>(<span class="keyword">this</span>.data[cNum]&gt;<span class="keyword">this</span>.data[pNum]) &#123;</div><div class="line">                [<span class="keyword">this</span>.data[cNum], <span class="keyword">this</span>.data[pNum]] = [<span class="keyword">this</span>.data[pNum], <span class="keyword">this</span>.data[cNum]];</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">            cNum=pNum;</div><div class="line">            pNum=<span class="built_in">parseInt</span>(pNum/<span class="number">2</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">this</span>.size++;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">delete</span>()&#123;</div><div class="line">        <span class="keyword">let</span> result=<span class="keyword">this</span>.data[<span class="number">0</span>];</div><div class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.data.length==<span class="number">1</span>)&#123;</div><div class="line">            <span class="keyword">this</span>.size--;</div><div class="line">            <span class="keyword">this</span>.data.length=<span class="number">0</span>;</div><div class="line">            <span class="keyword">return</span> result;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">this</span>.data[<span class="number">0</span>]=<span class="keyword">this</span>.data.pop();</div><div class="line">        <span class="keyword">let</span> pNum=<span class="number">0</span>, lcNum, rcNum, cNum;</div><div class="line">        <span class="keyword">while</span>(pNum*<span class="number">2</span>+<span class="number">1</span>&lt;<span class="keyword">this</span>.data.length)&#123;</div><div class="line">            lcNum = (pNum + <span class="number">1</span>) * <span class="number">2</span> - <span class="number">1</span>;</div><div class="line">            rcNum = (pNum + <span class="number">1</span>) * <span class="number">2</span>;</div><div class="line">            <span class="keyword">if</span>(<span class="keyword">this</span>.data[lcNum]&lt;<span class="keyword">this</span>.data[rcNum])&#123;</div><div class="line">                cNum=rcNum;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span> &#123;</div><div class="line">                cNum=lcNum;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span>(<span class="keyword">this</span>.data[pNum]&lt;<span class="keyword">this</span>.data[cNum])&#123;</div><div class="line">                [<span class="keyword">this</span>.data[pNum], <span class="keyword">this</span>.data[cNum]] = [<span class="keyword">this</span>.data[cNum], <span class="keyword">this</span>.data[pNum]];</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span> &#123;</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">            pNum=cNum;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">this</span>.size--;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">    print() &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.data);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>测试代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> h1=<span class="keyword">new</span> Heap();</div><div class="line">h1.build();</div><div class="line">h1.print();</div><div class="line">h1.insert(<span class="number">1</span>);</div><div class="line">h1.insert(<span class="number">13</span>);</div><div class="line">h1.insert(<span class="number">12</span>);</div><div class="line">h1.insert(<span class="number">122</span>);</div><div class="line">h1.insert(<span class="number">1221</span>);</div><div class="line">h1.insert(<span class="number">112</span>);</div><div class="line">h1.insert(<span class="number">121</span>);</div><div class="line">h1.insert(<span class="number">341</span>);</div><div class="line">h1.insert(<span class="number">12</span>);</div><div class="line">h1.insert(<span class="number">16</span>);</div><div class="line">h1.print();</div><div class="line"><span class="keyword">while</span>(h1.size&gt;<span class="number">0</span>)&#123;</div><div class="line">    <span class="built_in">console</span>.log(h1.delete());</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(h1)</div></pre></td></tr></table></figure></p>
+<p>测试结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">[]</div><div class="line">[ 8888888, 1221, 341, 122, 16, 112, 12, 121, 1, 12, 13 ]</div><div class="line">8888888</div><div class="line">1221</div><div class="line">341</div><div class="line">122</div><div class="line">121</div><div class="line">112</div><div class="line">16</div><div class="line">13</div><div class="line">12</div><div class="line">12</div><div class="line">1</div><div class="line">Heap &#123; data: [], size: 0 &#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -310,13 +317,13 @@ first ctrl+k, then v.">
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2017/09/29/VS-code-使用/">VS code 使用</a></p>
+        <p><span>Title:</span><a href="/2017/10/02/堆的JavaScript实现/">堆的JavaScript实现</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">X dober</a></p>
-        <p><span>Created:</span>2017-09-29, 00:01:56</p>
-        <p><span>Updated:</span>2017-09-29, 12:36:03</p>
+        <p><span>Created:</span>2017-10-02, 17:20:29</p>
+        <p><span>Updated:</span>2017-10-02, 17:23:56</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2017/09/29/VS-code-使用/" title="VS code 使用">http://xdober.github.io/2017/09/29/VS-code-使用/</a>
-            <span class="copy-path" data-clipboard-text="From http://xdober.github.io/2017/09/29/VS-code-使用/　　By X dober" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2017/10/02/堆的JavaScript实现/" title="堆的JavaScript实现">http://xdober.github.io/2017/10/02/堆的JavaScript实现/</a>
+            <span class="copy-path" data-clipboard-text="From http://xdober.github.io/2017/10/02/堆的JavaScript实现/　　By X dober" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -328,16 +335,10 @@ first ctrl+k, then v.">
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/10/02/堆的JavaScript实现/">
-                    堆的JavaScript实现
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/11/29/git使用笔记/">
-                    git使用笔记
+                <a href="/2017/09/29/VS-code-使用/">
+                    VS code 使用
                 </a>
             </div>
         
@@ -349,7 +350,7 @@ first ctrl+k, then v.">
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-预览"><span class="toc-number">1.</span> <span class="toc-text">Markdown 预览</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#堆的逻辑定义"><span class="toc-number">1.</span> <span class="toc-text">堆的逻辑定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#堆的典型实现"><span class="toc-number">2.</span> <span class="toc-text">堆的典型实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript的实现"><span class="toc-number">3.</span> <span class="toc-text">JavaScript的实现</span></a></li></ol>
         
     </div>
     <style>
@@ -385,7 +386,7 @@ first ctrl+k, then v.">
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"VS code 使用　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"堆的JavaScript实现　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -405,15 +406,13 @@ first ctrl+k, then v.">
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/10/02/堆的JavaScript实现/" title="Pre: 堆的JavaScript实现">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/11/29/git使用笔记/" title="Next: git使用笔记">
+            <a href="/2017/09/29/VS-code-使用/" title="Next: VS code 使用">
                 <i class="fa fa-angle-right"></i>
             </a>
         
